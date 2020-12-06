@@ -1,0 +1,59 @@
+﻿@model IEnumerable<NETD3202Lab5_1.Models.VideoGame>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.videoGameName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.videoGameRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.videoGameGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.videoGameRelease)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.videoGamePlatform)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoGameName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoGameRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoGameGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoGameRelease)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.videoGamePlatform)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.videoGameID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.videoGameID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.videoGameID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

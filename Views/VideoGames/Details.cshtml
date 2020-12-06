@@ -1,0 +1,48 @@
+﻿@model NETD3202Lab5_1.Models.VideoGame
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VideoGame</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.videoGameName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.videoGameName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.videoGameRating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.videoGameRating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.videoGameGenre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.videoGameGenre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.videoGameRelease)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.videoGameRelease)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.videoGamePlatform)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.videoGamePlatform)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.videoGameID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,54 @@
+﻿@model NETD3202Lab5_1.Models.VideoGame
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>VideoGame</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="videoGameID" />
+            <div class="form-group">
+                <label asp-for="videoGameName" class="control-label"></label>
+                <input asp-for="videoGameName" class="form-control" />
+                <span asp-validation-for="videoGameName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="videoGameRating" class="control-label"></label>
+                <input asp-for="videoGameRating" class="form-control" />
+                <span asp-validation-for="videoGameRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="videoGameGenre" class="control-label"></label>
+                <input asp-for="videoGameGenre" class="form-control" />
+                <span asp-validation-for="videoGameGenre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="videoGameRelease" class="control-label"></label>
+                <input asp-for="videoGameRelease" class="form-control" />
+                <span asp-validation-for="videoGameRelease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="videoGamePlatform" class="control-label"></label>
+                <input asp-for="videoGamePlatform" class="form-control" />
+                <span asp-validation-for="videoGamePlatform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

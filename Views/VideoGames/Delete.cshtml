@@ -1,4 +1,12 @@
-﻿@model NETD3202Lab5_1.Models.VideoGame
+﻿<!----------------------------------------------------------------------------------------------------------->
+<!--Student Name: Dakota Parrish-->
+<!--Project Name: NETD3202 Lab 5-->
+<!--Course Code: NETD3202-->
+<!--Date: December 12, 2020-->
+<!--Purpose: This page is used simply to delete any of the video games' that are currently in the database. This was
+    created through the use of Microsoft's Entity Framework.
+<!-------------------------------------------------------------------------------------------------------------->
+@model NETD3202Lab5_1.Models.VideoGame
 
 @{
     ViewData["Title"] = "Delete";
@@ -11,38 +19,38 @@
     <h4>VideoGame</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGameName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGameName)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGameRating)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGameRating)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGameGenre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGameGenre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGameRelease)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGameRelease)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGamePlatform)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGamePlatform)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="videoGameID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

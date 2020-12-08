@@ -1,4 +1,12 @@
-﻿using System;
+﻿/******************************************************************************************************************************
+ * Student Name: Dakota Parrish
+ * Project Name: NETD3202 Lab 5
+ * Course Code: NETD3202
+ * Date: December 7, 2020
+ * Purpose: The purpose of this page is to be the controller for the home views. It controls the use of views of the index and
+ * privacy pages.
+ * ***************************************************************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;

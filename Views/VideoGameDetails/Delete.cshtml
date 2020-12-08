@@ -1,4 +1,12 @@
-﻿@model NETD3202Lab5_1.Models.VideoGameDetails
+﻿<!----------------------------------------------------------------------------------------------------------->
+<!--Student Name: Dakota Parrish-->
+<!--Project Name: NETD3202 Lab 5-->
+<!--Course Code: NETD3202-->
+<!--Date: December 12, 2020-->
+<!--Purpose: This page is used simply to delete any video game's description that is currently in the database. This was
+    created through the use of Microsoft's Entity Framework.
+<!-------------------------------------------------------------------------------------------------------------->
+@model NETD3202Lab5_1.Models.VideoGameDetails
 
 @{
     ViewData["Title"] = "Delete";
@@ -11,14 +19,14 @@
     <h4>VideoGameDetails</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.videoGameDescription)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.videoGameDescription)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="videoGameID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

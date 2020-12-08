@@ -1,4 +1,12 @@
 ﻿using System;
+/******************************************************************************************************************************
+ * Student Name: Dakota Parrish
+ * Project Name: NETD3202 Lab 5
+ * Course Code: NETD3202
+ * Date: December 7, 2020
+ * Purpose: The purpose of this class is to be the primary table for my web application's database. It has a primary key
+ * for the video game ID and allows the user to enter information for a game of their choosing. 
+ * ***************************************************************************************************************************/
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

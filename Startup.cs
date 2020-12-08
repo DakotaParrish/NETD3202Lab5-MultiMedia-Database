@@ -34,6 +34,7 @@ namespace NETD3202Lab5_1
             //Adds a virtual connection to the database used for this lab.
             string connection = @"Server=(localdb)\mssqllocaldb;Database=NETD3202Lab5_1;Trusted_Connection=True;ConnectRetryCount=0";
 
+            //Connects the database using an SQL server and the recently created connection variable.
             services.AddDbContext<VideoGameContext>(options => options.UseSqlServer(connection));
 
         }

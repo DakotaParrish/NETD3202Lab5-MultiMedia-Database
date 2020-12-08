@@ -4,6 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
+<!--Header field of the home index page-->
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<!--Image of the database's logo-->
+<img src="~/database_logo.png" />
+
 <h1>Index</h1>
 
 <p>
@@ -31,29 +38,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoGameName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoGameRating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoGameGenre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoGameRelease)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoGamePlatform)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.videoGameID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.videoGameID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.videoGameID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoGameName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoGameRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoGameGenre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoGameRelease)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoGamePlatform)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.videoGameID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.videoGameID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.videoGameID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
